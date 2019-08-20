@@ -1,0 +1,41 @@
+
+https://www.c-sharpcorner.com/article/learn-about-web-api-validation/
+Validation techniques
+
+1. Data Annotations {properly level validation}
+
+Data Memeber can be decorated using
+[Required]
+[Range(0, 999)]
+
+There are more than 30 attribute classes in the System.ComponentModel.DataAnnotations some of them are
+
+RequiredAttribute
+Range Attribute
+EmailAddressAttribute
+MinLengthAttribute
+MaxLengthAttribute
+
+In Controller action method we can check validations using
+if (ModelState.IsValid)
+
+2. IValidatableObject interface (class level validation)
+
+implement Validate method for model class
+
+public IEnumerable <ValidationResult> Validate(ValidationContextvalidationContext) {  
+        if (Math.Abs(Price) < 0) {  
+            yield return new ValidationResult("InvalidPrice");  
+        }  
+
+3. Install-Package FluentValidation.WebAPI
+
+decorate model class with
+[Validator(typeof(ProductValidator))]  
+    public class Product  
+    {  }
+
+Write ProductValidator class with All model validation rules
+
+
+            

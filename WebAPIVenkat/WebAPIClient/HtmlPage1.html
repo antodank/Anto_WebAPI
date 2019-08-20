@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="Scripts/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var ulEmployees = $('#ulEmployees');
+            var row = "";
+
+            // Get the username & password from textboxes
+            
+            $('#btn').click(function () {
+
+                var username = $('#txtUsername').val();
+                var password = $('#txtPassword').val();
+
+                alert(username);
+
+                $.ajax({
+                    type: "GET",
+                    url: "http://localhost:50393/api/employee?Gender=all",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    // Specify the authentication header
+                    // btoa() method encodes a string to Base64
+                    headers: {
+                        'Authorization': 'Basic ' + btoa(username + ':' + password)
+                    },
+                    success: function (response) {
+                        //console.log(response);  
+                        $.each(response, function (index, item) {
+                            row += "<tr>" +
+                                "<td id='ID'>" + item.ID + "</td>" +
+                                "<td id='FirstName'>" + item.FirstName + "</td>" +
+                                "<td id='LastName'>" + item.LastName + "</td>" +
+                                "<td id='Gender'>" + item.Gender + "</td>" +
+                                "<td id='Salary'>" + item.Salary + "</td>" +
+                                "</tr>";
+                            //console.log(item);  
+
+                            var fullName = item.FirstName + ' ' + item.LastName;
+                            ulEmployees.append('<li>' + fullName + '</li>')
+                        });
+
+                        $("#tbDetails tbody").append(row);
+                      
+                    },
+                    failure: function (response) {
+                        console.log("failure - " + response.responseText);
+                    },
+                    error: function (response) {
+                        console.log("error - " + response.responseText);
+                    }
+                });
+            });
+
+            $('#btnClear').click(function () {
+                ulEmployees.empty();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <input id="btn" type="button" value="Get All Employees" />
+        <input id="btnClear" type="button" value="Clear" />
+        <div>
+            Username : <input type="text" id="txtUsername" />
+        </div>
+        <div>
+            Password : <input type="password" id="txtPassword" />
+        </div>
+            
+
+        <ul id="ulEmployees"></ul>
+        <table id="tbDetails" width="800" runat="server" clientidmode="Static">
+            <tbody>
+                <tr>
+                    <td>ID</td>
+                    <td>Firstname</td>
+                    <td>Lastname</td>
+                    <td>Gender</td>
+                    <td>Salary</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

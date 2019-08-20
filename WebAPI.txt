@@ -1,0 +1,72 @@
+REST stands for Representational State Transfer.
+
+REST is an architectural pattern for creating an API that uses HTTP as its underlying communication method
+
+The default Web API route starts
+"api/{controller}/{id}"
+
+routes are registerd in WebApiConfig.Register() method
+
+In Web API Controller is inherited from ApiController Class and in MVC it is inherited from Controller
+
+Data is exchange in xml or json format
+
+-----------------------
+Content Negociation -
+A Web API request that is sent to the server includes an Accept header. 
+Using the Accept header the client can specify the format for the response. 
+
+Accept: application/xml returns XML
+Accept: application/json returns JSON
+
+Multiple values can also be specified for the Accept header.
+Accept: application/xml,application/json
+
+-----------------
+MediaTypeFormatter -
+MediaTypeFormatter is an abstract class from which JsonMediaTypeFormatter and XmlMediaTypeFormatter classes inherit
+
+Allows to return only specific format data (JSON or XML) from ASP.NET Web API Service irrespective of the Accept header value
+
+In WebApiConfig
+config.Formatters.Remove() - method is used to unsupport any specific format
+
+You can also add custom MediTypeFormatter - for CSV or text data
+In WebApiConfig file add -
+create custom CSVMediaTypeFormatter that inherits from the base abstract class MediaTypeFormatter 
+config.Formatters.Add()
+
+-----------------
+PUT -  Resource URI is known, Used o update or create a new resource .
+create or overwrite a resource at a particular URL that is known by the client.
+PUT method is idempotent because no matter how many times we send the same request, the results will always be the same
+PUT responses are not cacheable.
+
+POST - Resource URI is known, mainly used to create new resource.
+A POST method should be used if you do not know the specific URL of where your newly created resource should reside
+The POST method is not idempotent since if we send the same POST request multiple times, we will receive various results
+PUT responses are cacheable.
+
+-------------------------
+Web Api requests are mapped with method in a controller that has exact same name or starts with that particular HTTP verb 
+HTTP GET request will map to get() method if exist in controller
+HTTP GET request can also map to the GetEmployees() as it starts with valid HTTP verb
+
+We can specify custom name to controller method by decorating the method using
+[httpGet], [HttpPost] atrributes.
+
+----------------------
+We can add querystring parameter to web api request -
+http://localhost/api/employees?gender=Male
+
+---------------
+Parameter Binding 
+Attributes - [FromUri],[FromBody]
+
+If the parameter is a simple type like int, bool, double, etc., Web API tries to get the value from the URI (Either from route data or Query String)
+
+If the parameter is a complex type like Customer, Employee etc., Web API tries to get the value from the request body
+
+public HttpResponseMessage Put([FromBody]int id, [FromUri]Employee employee)
+
+--------------
