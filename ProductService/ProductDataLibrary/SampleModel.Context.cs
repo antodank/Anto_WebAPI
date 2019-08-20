@@ -13,10 +13,10 @@ namespace ProductDataLibrary
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class dbSampleEntities : DbContext
+    public partial class sampleDBEntities : DbContext
     {
-        public dbSampleEntities()
-            : base("name=dbSampleEntities")
+        public sampleDBEntities()
+            : base("name=sampleDBEntities")
         {
         }
     
@@ -25,6 +25,6 @@ namespace ProductDataLibrary
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<tblProduct> tblProducts { get; set; }
     }
 }

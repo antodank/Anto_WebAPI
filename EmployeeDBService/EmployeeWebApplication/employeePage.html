@@ -8,9 +8,10 @@
         $(document).ready(function () {
             var ulEmployees = $('#ulEmployees');
             $('#btn').click(function () {
+                alert('btn clicked');
                 $.ajax({
                     type: 'GET',
-                    url: "api/employees/",
+                    url: "http://localhost:1761/Api/employees/",
                     dataType: 'json',
                     success: function (data) {
                         ulEmployees.empty();

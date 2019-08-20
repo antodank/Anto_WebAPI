@@ -12,31 +12,31 @@ namespace ProductService.Controllers
     {
 
         [HttpGet]
-        public IEnumerable<Product> listProducts()
+        public IEnumerable<tblProduct> listProducts()
         {
-            using (dbSampleEntities entities = new dbSampleEntities())
+            using (sampleDBEntities entities = new sampleDBEntities())
             {
-                return entities.Products.ToList();
+                return entities.tblProducts.ToList<tblProduct>();
             }
         }
 
-        [HttpGet]
-        public Product listProductsByID(int PID)
-        {
-            using (dbSampleEntities entities = new dbSampleEntities())
-            {
-                return entities.Products.FirstOrDefault(p => p.ProductID == PID);
-            }
-        }
+        //[HttpGet]
+        //public tblProduct listProductsByID(int PID)
+        //{
+        //    using (dbSampleEntities entities = new dbSampleEntities())
+        //    {
+        //        return entities.Products.FirstOrDefault(p => p.ProductID == PID);
+        //    }
+        //}
 
         [HttpPost]
-        public HttpResponseMessage AddProduct(Product prds)
+        public HttpResponseMessage AddProduct(tblProduct prds)
         {
             try
             {
-                using (dbSampleEntities entities = new dbSampleEntities())
+                using (sampleDBEntities  entities = new sampleDBEntities())
                 {
-                    entities.Products.Add(prds);
+                    entities.tblProducts.Add(prds);
                     entities.SaveChanges();
 
                     var message = Request.CreateResponse(HttpStatusCode.Created, prds);
@@ -53,13 +53,13 @@ namespace ProductService.Controllers
         }
 
         [HttpPut]
-        public HttpResponseMessage UpdateProduct(Product prds)
+        public HttpResponseMessage UpdateProduct(tblProduct prds)
         {
             try
             {
-                using (dbSampleEntities entities = new dbSampleEntities())
+                using (sampleDBEntities entities = new sampleDBEntities())
                 {
-                    entities.Products.Add(prds);
+                    entities.tblProducts.Add(prds);
                     entities.SaveChanges();
 
                     var message = Request.CreateResponse(HttpStatusCode.Created, prds);
@@ -80,9 +80,9 @@ namespace ProductService.Controllers
         {
             try
             {
-                using (dbSampleEntities entities = new dbSampleEntities())
+                using (sampleDBEntities entities = new sampleDBEntities())
                 {
-                    var entity = entities.Products.FirstOrDefault(e => e.ProductID == PID);
+                    var entity = entities.tblProducts.FirstOrDefault(e => e.ProductID == PID);
                     if (entity == null)
                     {
                         return Request.CreateErrorResponse(HttpStatusCode.NotFound,
@@ -90,7 +90,7 @@ namespace ProductService.Controllers
                     }
                     else
                     {
-                        entities.Products.Remove(entity);
+                        entities.tblProducts.Remove(entity);
                         entities.SaveChanges();
                         return Request.CreateResponse(HttpStatusCode.OK);
                     }

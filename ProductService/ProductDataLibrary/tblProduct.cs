@@ -12,11 +12,11 @@ namespace ProductDataLibrary
     using System;
     using System.Collections.Generic;
     
-    public partial class Product
+    public partial class tblProduct
     {
         public int ProductID { get; set; }
         public string Name { get; set; }
-        public string Category { get; set; }
+        public int CategoryID { get; set; }
         public Nullable<decimal> Price { get; set; }
     }
 }
