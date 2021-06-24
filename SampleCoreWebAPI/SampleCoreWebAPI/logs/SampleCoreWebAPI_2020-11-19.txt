@@ -1,0 +1,91 @@
+2020-11-19 16:55:37,727  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-11-19 16:55:37,737  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Hosting environment: Development
+ 2020-11-19 16:55:37,737  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Content root path: F:\PRACS\WebAPI\Github_WebAPI\Anto_WebAPI\SampleCoreWebAPI\SampleCoreWebAPI
+ 2020-11-19 16:55:39,564  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 11:25:39
+ 2020-11-19 16:55:39,564  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 5
+ 2020-11-19 23:56:52,875  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-11-19 23:56:52,902  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Hosting environment: Development
+ 2020-11-19 23:56:52,902  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Content root path: F:\PRACS\WebAPI\Github_WebAPI\Anto_WebAPI\SampleCoreWebAPI\SampleCoreWebAPI
+ 2020-11-19 23:57:02,408  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 18:27:02
+ 2020-11-19 23:57:02,408  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 5
+ 2020-11-19 23:57:10,242  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 18:27:10
+ 2020-11-19 23:57:10,243  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 1
+ 2020-11-19 23:57:12,548  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 18:27:12
+ 2020-11-19 23:57:12,549  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 1
+ 2020-11-19 23:57:13,811  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 18:27:13
+ 2020-11-19 23:57:13,812  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 1
+ 2020-11-19 23:57:14,124  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 18:27:14
+ 2020-11-19 23:57:14,124  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 1
+ 2020-11-19 23:57:17,454  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 18:27:17
+ 2020-11-19 23:57:17,455  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 1
+ 2020-11-19 23:57:17,939  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 18:27:17
+ 2020-11-19 23:57:17,939  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 1
+ 2020-11-19 23:57:18,605  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 18:27:18
+ 2020-11-19 23:57:18,605  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 1
+ 2020-11-19 23:57:19,158  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 18:27:19
+ 2020-11-19 23:57:19,159  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 1
+ 2020-11-19 23:57:57,949  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-11-19 23:57:57,958  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Hosting environment: Development
+ 2020-11-19 23:57:57,959  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Content root path: F:\PRACS\WebAPI\Github_WebAPI\Anto_WebAPI\SampleCoreWebAPI\SampleCoreWebAPI
+ 2020-11-19 23:58:04,681  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 18:28:04
+ 2020-11-19 23:58:04,681  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 1
+ 2020-11-19 23:58:05,171  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 18:28:05
+ 2020-11-19 23:58:05,171  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 1
+ 2020-11-19 23:58:05,852  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 18:28:05
+ 2020-11-19 23:58:05,853  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 1
+ 2020-11-19 23:58:06,514  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 18:28:06
+ 2020-11-19 23:58:06,514  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 1
+ 2020-11-19 23:58:07,135  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 18:28:07
+ 2020-11-19 23:58:07,135  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 1
+ 2020-11-19 23:58:07,702  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 18:28:07
+ 2020-11-19 23:58:07,702  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 1
+ 2020-11-19 23:58:08,355  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 18:28:08
+ 2020-11-19 23:58:08,355  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 1
+ 2020-11-19 23:58:08,910  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 18:28:08
+ 2020-11-19 23:58:08,910  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 1
+ 2020-11-19 23:58:09,356  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 18:28:09
+ 2020-11-19 23:58:09,356  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 1
+ 2020-11-19 23:58:09,670  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 18:28:09
+ 2020-11-19 23:58:09,670  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 1
+ 2020-11-19 23:58:11,642  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 18:28:11
+ 2020-11-19 23:58:11,643  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 1
+ 2020-11-19 23:58:12,250  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 18:28:12
+ 2020-11-19 23:58:12,251  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 1
+ 2020-11-19 23:58:12,781  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 18:28:12
+ 2020-11-19 23:58:12,781  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 1
+ 2020-11-19 23:59:04,459  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-11-19 23:59:04,469  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Hosting environment: Development
+ 2020-11-19 23:59:04,469  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Content root path: F:\PRACS\WebAPI\Github_WebAPI\Anto_WebAPI\SampleCoreWebAPI\SampleCoreWebAPI
+ 2020-11-19 23:59:07,567  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 18:29:07
+ 2020-11-19 23:59:07,567  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 1
+ 2020-11-19 23:59:08,236  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 18:29:08
+ 2020-11-19 23:59:08,236  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 1
+ 2020-11-19 23:59:08,782  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 18:29:08
+ 2020-11-19 23:59:08,782  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 1
+ 2020-11-19 23:59:09,267  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 18:29:09
+ 2020-11-19 23:59:09,269  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 1
+ 2020-11-19 23:59:09,739  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 18:29:09
+ 2020-11-19 23:59:09,739  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 1
+ 2020-11-19 23:59:10,211  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 18:29:10
+ 2020-11-19 23:59:10,212  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 1
+ 2020-11-19 23:59:10,842  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 18:29:10
+ 2020-11-19 23:59:10,842  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 1
+ 2020-11-19 23:59:11,308  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 18:29:11
+ 2020-11-19 23:59:11,308  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 1
+ 2020-11-19 23:59:12,856  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 18:29:12
+ 2020-11-19 23:59:12,856  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 1
+ 2020-11-19 23:59:13,537  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 18:29:13
+ 2020-11-19 23:59:13,537  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 1
+ 2020-11-19 23:59:14,229  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 18:29:14
+ 2020-11-19 23:59:14,229  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 1
+ 2020-11-19 23:59:14,761  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 18:29:14
+ 2020-11-19 23:59:14,762  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 1
+ 2020-11-19 23:59:15,280  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 18:29:15
+ 2020-11-19 23:59:15,280  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 1
+ 2020-11-19 23:59:15,632  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 18:29:15
+ 2020-11-19 23:59:15,632  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 1
+ 2020-11-19 23:59:17,008  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 18:29:17
+ 2020-11-19 23:59:17,008  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 1
+ 2020-11-19 23:59:17,316  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 18:29:17
+ 2020-11-19 23:59:17,316  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 1
+ 

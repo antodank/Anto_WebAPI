@@ -16,11 +16,19 @@ Content Negociation -
 A Web API request that is sent to the server includes an Accept header. 
 Using the Accept header the client can specify the format for the response. 
 
+It is the process of selecting the best representation for a given response when there are multiple representations available.
+
+Accept: Which media types are acceptable for the response
+
 Accept: application/xml returns XML
 Accept: application/json returns JSON
-
 Multiple values can also be specified for the Accept header.
 Accept: application/xml,application/json
+
+
+Accept-Charset: Which character sets are acceptable, such as UTF-8 or ISO 8859-1.
+Accept-Encoding: Which content encodings are acceptable, such as gzip.
+Accept-Language: The preferred natural language, such as "en-us".
 
 -----------------
 MediaTypeFormatter -
@@ -55,13 +63,18 @@ HTTP GET request can also map to the GetEmployees() as it starts with valid HTTP
 We can specify custom name to controller method by decorating the method using
 [httpGet], [HttpPost] atrributes.
 
-----------------------
+--------------------------------------------------------------------
 We can add querystring parameter to web api request -
 http://localhost/api/employees?gender=Male
 
----------------
+
+--------------------------------------------------------------------
 Parameter Binding 
+
 Attributes - [FromUri],[FromBody]
+
+Simple types are taken from the URI.
+Complex types are taken from the request body.
 
 If the parameter is a simple type like int, bool, double, etc., Web API tries to get the value from the URI (Either from route data or Query String)
 
@@ -69,4 +82,175 @@ If the parameter is a complex type like Customer, Employee etc., Web API tries t
 
 public HttpResponseMessage Put([FromBody]int id, [FromUri]Employee employee)
 
---------------
+--------------------------------------------------------------------
+Routing
+--------------------------------------------------------------------
+
+
+.Net Web API
+
+A controller is a class that handles HTTP requests
+
+The public methods of the controller are called actions
+When the Web API framework receives a request -
+- it looks for controller
+- then looks HTTP verb and then looks for an action whose name begins with that HTTP verb name
+
+To determine which action to invoke, the framework uses a routing table. 
+
+This route is defined in the WebApiConfig.cs file
+
+routes.MapHttpRoute(
+    name: "API Default",
+    routeTemplate: "api/{controller}/{id}",
+    defaults: new { id = RouteParameter.Optional }
+);
+
+Routing by Action Name
+
+routeTemplate: "api/{controller}/{action}/{id}",
+	
+
+
+.Net Core Web API
+
+Routing is registered in the middleware pipeline in Configure() id Startup.cs 
+Routing uses a pair of middleware, registered by UseRouting and UseEndpoints
+
+---------------------------------------------------------------------
+
+In convention based routing all the routing is configured in the Startup class. 
+
+In Attribute Routing routing is configured at the controller level.
+
+Attribute Routing
+
+- Parent child resources relationship
+
+[Route("customers/{customerId}/orders")]   //  api/customers/1/orders
+
+	// Attribute routing.
+    config.MapHttpAttributeRoutes();
+	
+-------------------------------------
+
+Non- standard HTTP Verb
+
+[AcceptVerbs("Science")]
+
+-------------------------------------
+
+Routing by Action Name
+
+	[HttpGet]
+    [ActionName("Thumbnail")]
+	
+------------------------------------
+
+Route PRefix
+
+[RoutePrefix("api/books")]
+public class BooksController
+
+--------------------------------------
+
+Route Constraints
+The Route constraints should be used to help the Routing Engine to distinguish between two similar looking routes.
+Not for data type validation
+
+[Route("{id:int}")] // constrained parameter
+
+[Route("details")]  // literal
+
+[Route("{customerName}")]  // unconstrained parameter
+
+[Route("{*userName}")] // Unconstrained Wildcard Parameter
+
+-------------------------------------
+
+Route Order - default 0
+
+[Route("pending", RouteOrder = 1)]
+
+Order flow -
+Literal segments
+Route parameters with constraints
+Route parameters without constraints
+Wildcard
+
+-----------------------------------------------------------------------------------
+
+Return types 
+
+A Web API controller action can return any of the following:
+
+void
+HttpResponseMessage
+IHttpActionResult
+Some other type
+
+ASP.NET Core 2.1 introduced the ActionResult<T> return type for web API controller actions
+
+
+https://www.tektutorialshub.com/asp-net-core/asp-net-core-action-selectors-action-verbs/
+
+----------------------------------
+
+Exception Handling
+
+most exceptions are translated into an HTTP response with status code 500, Internal Server Error.
+
+throw new HttpResponseException(response);
+
+You can customize how Web API handles exceptions by writing an exception filter.
+
+
+
+
+
+
+
+
+
+
+
+
+AcceptVerbs, Multiple Routes, Route Names and Self-Referencing URLs
+
+Optional Route Parameters and Default Values
+
+
+
+Introduction to DelegatingHandlers
+
+Simple Example of a DelegatingHandler
+
+Example of an API Key DelegatingHandler
+
+Example of a DelegatingHandler Failure
+
+Basic Authentication
+
+JWT Authentication
+
+Implement an API Key Authentication Filter
+
+The Authorize and AllowAnonymous Attributes
+
+Example of a RequireHttps Authorization Filter
+
+Example of a RequireClaims Authorization Filter
+
+
+The Global.asax.cs Application_Error() Handler of Last Resort
+
+Exception Filters
+
+Global Exception Handlers
+
+Global Exception Loggers
+
+
+Enabling CORS in Web API Services
+
+Versioning Your API

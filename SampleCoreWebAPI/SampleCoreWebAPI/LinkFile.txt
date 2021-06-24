@@ -1,0 +1,43 @@
+﻿
+https://www.syncfusion.com/blogs/post/how-to-build-crud-rest-apis-with-asp-net-core-3-1-and-entity-framework-core-create-jwt-tokens-and-secure-apis.aspx
+
+
+
+This package helps generate controllers and views.
+
+Install-Package Microsoft.VisualStudio.Web.CodeGeneration.Design -Version 3.1.0
+
+This package helps create database context and model classes from the database.
+
+Install-Package Microsoft.EntityFrameworkCore.Tools -Version 3.1.0
+
+Database provider allows Entity Framework Core to work with SQL Server.
+
+Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 3.1.0
+
+It provides support for creating and validating a JWT token.
+
+Install-Package System.IdentityModel.Tokens.Jwt -Version 5.6.0
+
+This is the middleware that enables an ASP.NET Core application to receive a bearer token in the request pipeline.
+
+Install-Package Microsoft.AspNetCore.Authentication.JwtBearer -Version 3.1.0
+
+
+
+Use Scaffold-DbContext to create a model based on your existing database.
+
+Scaffold-DbContext [-Connection] [-Provider] [-OutputDir] [-Context] [-Schemas>] [-Tables>]
+
+Using CLI
+dotnet ef dbcontext scaffold "Server=.\SQLEXPRESS;Database=SchoolDB;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -o Models
+
+DbContext in EF Core allows us to perform following tasks:
+
+Manage database connection
+Configure model & relationship
+Querying database
+Saving data to the database
+Configure change tracking
+Caching
+Transaction management

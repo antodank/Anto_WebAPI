@@ -93,6 +93,7 @@
       <DependentUpon>EmployeeDataModel.edmx</DependentUpon>
       <LastGenOutput>EmployeeDataModel.Context.cs</LastGenOutput>
     </Content>
+    <Content Include="EmployeeDataModel.edmx.sql" />
     <Content Include="EmployeeDataModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>EmployeeDataModel.edmx</DependentUpon>

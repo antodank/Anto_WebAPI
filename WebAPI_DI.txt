@@ -1,0 +1,15 @@
+Add Singleton
+When we register a type as singleton, only one instance is available throughout the application and for every request.
+It is similar to having a static object.
+The instance is created for the first request and the same is available throughout the application and for each subsequent requests.
+
+Disposed when App shutdown
+
+Add Scoped
+Add scoped specifies that a single object is available per request.
+
+
+Add Transient
+When we register a type as Transient, every time a new instance is created.
+
+Disposed - End of evry request

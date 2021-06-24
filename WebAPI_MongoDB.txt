@@ -1,0 +1,34 @@
+
+
+dotnet new web api -o MongoDbExample
+
+dotnet add package MongoDB.Driver
+
+MongoServer - This represents an instance of the MongoDB Server.
+
+MongoClient - This class is used to read the server instance for performing operations on the database. The constructor of this class is passed with the MongoDB Connection string as shown in the following box
+
+"mongodb://localhost:27017"
+MongoDatabase - This represents Mongo Database for performing operations. This class provides following methods
+
+GetCollection<T>(collection)
+· T is the CLR object to be collection.
+· This returns MongoCollection.
+Methods
+FindAll() - Returns all documents in collection()
+FindOne() - Returns a single document based on Mongo Query object generated based on _id.
+Save() - Save a new document in collection.
+Update() - Update a document.
+Remove() - Remove a document.
+
+
+ref-
+
+https://github.com/aelassas/store/tree/master/src/middlewares
+
+ singletone
+
+https://www.c-sharpcorner.com/article/using-mongodb-with-asp-net-core-web-api/
+
+Scoped-
+https://code-maze.com/getting-started-aspnetcore-mongodb/

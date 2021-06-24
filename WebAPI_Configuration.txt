@@ -1,0 +1,48 @@
+Startup.cs 
+Startup class which triggers at first when application launches.
+This file is entry point of application level it handle request pipeline. 
+
+startup.cs is mandatory for each web API but name can be different depending upon environment
+
+multiple Startup classes are allowed in a single application
+
+ConfigureServices Method :
+The ConfigureServices method is a place where you can register your dependent classes with the built-in IoC container.
+
+Configure Method :
+The Configure method is used to specify how the application will respond in each HTTP request. 
+This method is mostly used for registering middleware in HTTP pipeline.
+
+
+Program.cs :
+
+ASP.NET Core Program class file is place where we can create a host for the web application
+
+CreateHostBuilder() -
+
+CreateDefaultBuilder a generic Host builder in .NET and ASP.NET Core plays an important role in initializing the Host and its configuration like 
+getting access to applications host details including app configuration, logger configuration, user secretes, getting access to environmental configuration
+
+when you define your host with CreateDefaultBuilder it loads Application Configuration from ASP.NET Core appsettings.json in ASP.NET Core.
+
+implementation
+
+public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
+    WebHost.CreateDefaultBuilder(args)
+        .UseStartup<Startup>();
+		
+		
+This application configuration is available to you out of the box and accessible through the IConfiguration interface in startup.cs file
+
+We can load configuration from different file providers like JSON, INI or XML files
+
+we neeed to call ConfigureAppConfiguration((hostingContext, config) =>{ }) of WebHost object
+
+All above configuration canbe easily accessible through IConfiguration interface
+
+
+ConfigureWebHostDefaults – This adds everything else required by a typical ASP.NET Core application (kestrel configuration, and using the Startup class, middleware pipeline…)
+
+Practical - 
+
+First, we need to configure CORS in our application. CORS (Cross-Origin Resource Sharing) is a mechanism that gives rights to the user to access resources from the server on a different domain. 

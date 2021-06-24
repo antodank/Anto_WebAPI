@@ -1,0 +1,13 @@
+2020-11-19 16:52:31,462  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-11-19 16:52:31,474  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Hosting environment: Development
+ 2020-11-19 16:52:31,476  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Content root path: F:\PRACS\WebAPI\Github_WebAPI\Anto_WebAPI\SampleCoreWebAPI\SampleCoreWebAPI
+ 2020-11-19 16:52:33,164  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 11:22:33
+ 2020-11-19 16:52:33,166  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 1
+ 2020-11-19 16:54:12,790  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-11-19 16:54:12,799  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Hosting environment: Development
+ 2020-11-19 16:54:12,799  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Content root path: F:\PRACS\WebAPI\Github_WebAPI\Anto_WebAPI\SampleCoreWebAPI\SampleCoreWebAPI
+ 2020-11-19 16:54:16,456  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 11:24:16
+ 2020-11-19 16:54:16,456  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 1
+ 2020-11-19 16:54:38,191  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Request received at 11:24:38
+ 2020-11-19 16:54:38,191  INFO SampleCoreWebAPI.Controllers.UserController.? [?] - MESSAGE: Start : Getting User details for 5
+ 

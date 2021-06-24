@@ -1,0 +1,103 @@
+Built-in Logging providers
+
+.NET Core framework comes with default built-in logging providers.
+
+built-in logging supports built providers like 
+Console -  appears in output window - ASP.Net Core Web Server
+Debug -  appears in output window - debug
+EventSource
+
+
+There are two ways to clean and change Default Logging provider
+
+1. Using Program.cs to Enable logging
+
+inside CreateWebHostBuilder register CreateDefaultBuilder() to host.
+
+CreateDefaultBuilder which is a Host Builder with the additional ability of loading default configuration.
+ 
+ Host.CreateDefaultBuilder(args)
+        .ConfigureLogging(logging =>
+        {
+            logging.ClearProviders();
+            logging.AddConsole();
+        })
+		
+This method will also load the logging configuration provided in appsettings.json
+
+2. Using startup.cs Services i.e ConfigureServices() to enable logging
+
+public void Configure(IApplicationBuilder app,  
+    IHostingEnvironment env, ILoggerFactory loggerFactory)  
+{  
+    loggerFactory.ClearProviders();
+    loggerFactory.AddConsole();
+} 
+
+Using ConfigureServices is a preferred technique as it will not pollute your Program.cs
+
+-------------------------------------------------------------------------------------------------------------------
+Third party Logging providers
+
+-------------- log4net -----------------------------------------
+
+PMC -> 
+
+Install-Package Microsoft.Extensions.Logging.Log4Net.AspNetCore -Version 3.1.0
+
+Add log4net.config file in solution 
+
+1. Using Program.cs
+
+	logging.SetMinimumLevel(LogLevel.Trace);
+	logging.AddLog4Net("log4net.config");
+
+2. Using startup.cs 
+
+	loggerFactory.AddLog4Net();  
+	
+	
+----------------- Serilog ---------------------------------------
+Install Serilog.Sinks.File 
+
+In program.cs
+
+for console - 
+Log.Logger = new LoggerConfiguration()  
+                .Enrich.FromLogContext()  
+                .WriteTo.Console()  
+                .CreateLogger(); 
+
+to dump logs in file - 
+
+Log.Logger = new LoggerConfiguration()  
+                .Enrich.FromLogContext()  
+                .WriteTo.Console(new RenderedCompactJsonFormatter())       
+				.WriteTo.Debug(outputTemplate:DateTime.Now.ToString())          
+				.WriteTo.File("log.txt",rollingInterval:RollingInterval.Day)  
+                .CreateLogger();  
+
+Using seq - 
+Seq fully-supports the advanced structured logging provided by .NET Core and ASP.NET Core.		
+
+Install Serilog.Sinks.Seq nuget package
+
+In program.cs
+
+Log.Logger = new LoggerConfiguration()  
+                .Enrich.FromLogContext()  
+                .WriteTo.Console(new RenderedCompactJsonFormatter())  
+                .WriteTo.Debug(outputTemplate:DateTime.Now.ToString())  
+                .WriteTo.File("log.txt",rollingInterval:RollingInterval.Day)  
+                .WriteTo.Seq("http://localhost:5341/")  
+                .CreateLogger(); 
+
+startup.cs
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddLogging(loggingBuilder =>
+    {
+        loggingBuilder.AddSeq();
+    });
+	
+}

@@ -1,0 +1,20 @@
+
+In order to prevent an API endpoint from being misused, 
+we usually enforce a rate limit on the number of requests that a client can consume over a time period.
+
+Throttling the API endpoint on the server side can protect our system from overloading resources which 
+deteriorates the performance of the API endpoint
+
+The best way to implement the rate limiting is to create a middleware
+
+The AspNetCoreRateLimit package contains an IpRateLimitMiddleware and a ClientRateLimitMiddleware
+
+- install-package AspNetCoreRateLimit
+
+- Startup.cs -> ConfigureServices() -> register related services in the Dependency Injection (DI) system and 
+add the IP rate limiting middleware to the HTTP request-response pipeline
+
+something like -
+services.Configure<IpRateLimitOptions>(Configuration.GetSection("IpRateLimiting"));
+
+- we need to add "IpRateLimiting" section in appsettings.json

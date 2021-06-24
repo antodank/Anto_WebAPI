@@ -1,0 +1,139 @@
+www.geeksforgeeks.org
+
+https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?
+redirect_uri=storagerelay%3A%2F%2Fhttps%2Fwww.geeksforgeeks.org%3Fid%3Dauth309163&
+response_type=permission%20id_token&
+scope=email%20profile%20openid&
+openid.realm&
+client_id=388036620207-3uolk1hv6ta7p3r9l6s3bobifh086qe1.apps.googleusercontent.com&
+ss_domain=https%3A%2F%2Fwww.geeksforgeeks.org&
+fetch_basic_profile=true&
+gsiwebsdk=2&
+flowName=GeneralOAuthFlow
+
+www.c-sharpcorner.com
+
+https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?
+redirect_uri=storagerelay%3A%2F%2Fhttps%2Fwww.c-sharpcorner.com%3Fid%3Dauth429342&
+response_type=permission%20id_token&
+scope=email%20profile%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fplus.login%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fplus.profile.emails.read&
+openid.realm&
+client_id=1008907732563-jaf78g0pj7k52q8efh0r22c58iol91cg.apps.googleusercontent.com&
+ss_domain=https%3A%2F%2Fwww.c-sharpcorner.com&
+fetch_basic_profile=true&
+gsiwebsdk=2&
+flowName=GeneralOAuthFlow
+
+www.codeproject.com
+
+https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?
+response_type=code&
+client_id=857795997829.apps.googleusercontent.com&
+redirect_uri=https%3A%2F%2Fwww.codeproject.com%2Fscript%2FMembership%2FOAuthLogOn.aspx&
+scope=profile%20email&
+state=7585805&
+flowName=GeneralOAuthFlow
+
+pinterest
+
+https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?
+redirect_uri=storagerelay%3A%2F%2Fhttps%2Fin.pinterest.com%3Fid%3Dauth937088&
+response_type=permission%20id_token&scope=email%20profile%20openid&
+openid.realm&
+client_id=694505692171-31closf3bcmlt59aeulg2j81ej68j6hk.apps.googleusercontent.com&
+ss_domain=https%3A%2F%2Fin.pinterest.com&
+fetch_basic_profile=true&
+gsiwebsdk=2&
+flowName=GeneralOAuthFlow
+
+https://github.com/login?
+client_id=d7251d40ac9298bdd9fe&
+return_to=%2Flogin%2Foauth%2Fauthorize%3Fclient_id%3Dd7251d40ac9298bdd9fe%26redirect_uri%3Dhttps%253A%252F%252Fdev.to%252Fusers%252Fauth%252Fgithub%252Fcallback%26response_type%3Dcode%26scope%3Duser%253Aemail%26state%3Daeea1952dfdbad1fde32c7f38ae5518bf792c410e6fb59dc
+
+
+OAuth -
+
+Delegated Authorisation - main
+
+Single Signon on diffrent modules of same application
+
+Single sign on multiple sites
+
+Mobile App Login 
+
+
+Resource 
+
+Resource Owner - An entity which grants access to protected resource - end user who press allow
+
+Resource Server - holds the resources
+
+Authorization Server - validate the user and issues access token
+
+Client - Is  a service or application which raise authorization request to get access to protected resource on behalf of Resource Owner
+
+OpenID Connect - extention on top of the OAuth for authentication
+
+OpenID Connect provides- 
+ID Token
+Userinfo
+standard set of scopes
+standard implementation
+
+
+==================================================================================================
+
+What is a JWT Token?
+
+JWT stands for JSON Web Token. 
+It is open standard and defines a better way for transferring data securely between two entities (client and server).
+
+Usage - 
+
+Authorisation
+
+Infomation Exchange
+
+A JWT is digitally signed using a secret key by a token provider or authentication server. 
+
+A JWT helps the resource server verify the token data using the same secret key, so that you can trust the data.
+
+JWT consists of the following three parts:
+
+Header: encoded data of token type and the algorithm used to sign the data.
+
+Payload: encoded data of claims intended to share.
+
+Signature: created by signing (encoded header + encoded payload) using a secret key.
+
+The final JWT token will be like this: Header.Payload.Signature
+
+Implementation -
+
+When user is authenticated Indentity server creates JWT and send it to cllient
+Client then store it in local storage or coockie and sends it with every subsequent request after then.
+JQT token is passed through header part of http request
+authorization : bearer JWT
+
+Resource server process this JWT token by decoding Header payload and secret key
+And if the signature matches with one created on Indetity server then it allows the user to access the resources
+
+process -   
+Read the token from authentication header.
+Split the header, payload, and signature from token.
+Create signature of received header and payload using the same secret key used when creating the token.
+Check whether both newly created signature and signature received from token are valid.
+If the signatures are the same, the tokens are valid (not altered in the middle) and they provide access to the requested resource.
+If the signatures are different, an unauthorized response will be sent back to the client.
+
+Cons - 
+
+JWT can be decoded easily so we cant save critical data in it
+Another user can copy JWT and can add in http request to get validated
+there is no conventional way to disable or delete JWT on server
+
+
+
+
+ 
+

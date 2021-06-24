@@ -1,0 +1,18 @@
+IIS (Internet Information Services) is one of the most powerful web servers from Microsoft that is used to host your ASP.NET Web application.
+
+Whenever a request comes from Client to Server, it will hit HTTP.SYS First
+
+HTTP.SYS is Responsible for pass the request to the particular Application pool
+
+Application Pool then forwards the request to worker process (w3wp.exe) associated with it
+
+Worker process (w3wp.exe) reads the URL of the request and loads the correct ISAPI extension. 
+
+ISAPI extensions are the IIS way to handle requests for different resources.
+
+ISAPI Extension then creates an HTTPRuntime Object to Process the request via HTTPModule and HTTPhandler
+
+HttpRutime calls the ProcessRequest method in the page requested which starts processing of the request.
+
+
+Depending on the extension ASP.NET routes the request to an appropriate handler that is responsible for picking up requests.
